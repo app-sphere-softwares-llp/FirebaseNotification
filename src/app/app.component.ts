@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { PushnotificationserviceService } from './services/pushnotificationservice.service';
+import { AngularFireMessaging } from '@angular/fire/messaging';
+
 
 @Component({
   selector: 'app-root',
@@ -12,14 +14,22 @@ export class AppComponent {
   message;
 
   constructor(
-    private pushMessaging: PushnotificationserviceService ){}
+    private pushMessaging: PushnotificationserviceService,
+    private afMessaging: AngularFireMessaging ){}
 
   // tslint:disable-next-line: use-lifecycle-interface
   ngOnInit()
   {
-    //console.log('meenal');
+    // console.log('meenal');
     this.pushMessaging.requestPermission();
     this.pushMessaging.receiveMessage();
     this.message = this.pushMessaging.currentMessage;
+    // this.afMessaging.messages
+    //   .subscribe((message) => { console.log(message); });
   }
+
+  // listen() {
+  //   this.afMessaging.messages
+  //     .subscribe((message) => { console.log(message); });
+  // }
 }
