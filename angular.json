@@ -21,7 +21,9 @@
             "aot": true,
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets",
+              "src/manifest.json",
+              "src/firebase-messaging-sw.js"
             ],
             "styles": [
               "src/styles.css"
@@ -119,6 +121,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "FirebaseCloudMessanging"
+    }
+  },
+  "defaultProject": "FirebaseCloudMessanging",
+  "cli": {
+    "analytics": "3683286d-5511-4849-a042-cd32bbb28730"
+  }
 }
