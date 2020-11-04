@@ -53,7 +53,7 @@ export class PushnotificationserviceService {
 
         notify.onclick = event => {
           event.preventDefault();
-          window.location.href = 'http://localhost:4200/';
+          window.location.href = 'http://www.google.com';
         };
 
       }

@@ -11,3 +11,18 @@ firebase.initializeApp({
     measurementId: "G-B0N4V9BEPT"
 });
 const messaging = firebase.messaging();
+
+// messaging.onBackgroundMessage(function(payload) {
+//     console.log('[firebase-messaging-sw.js] Received background message ', payload);
+//     // Customize notification here
+//     const notificationTitle = 'Message is active again';
+//     const notify = new Notification(title, options);
+
+//     notify.onclick = event => {
+//       event.preventDefault();
+//       window.location.href = 'http://www.youtube.com';
+//     };
+  
+//     self.registration.showNotification(notificationTitle,
+//       notify);
+//   });
